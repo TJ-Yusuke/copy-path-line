@@ -1,0 +1,40 @@
+{
+  "name": "copy-path-line",
+  "displayName": "Copy Path with Line (:L)",
+  "description": "Copy relative file path with line number in :L format",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.copyPathWithLineL",
+        "title": "Copy Path with Line (:L)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.copyPathWithLineL",
+        "key": "ctrl+alt+c",
+        "mac": "cmd+alt+c",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
